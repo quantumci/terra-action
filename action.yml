@@ -2,8 +2,10 @@ name: 'Terraform Action'
 description: 'Run Terraform to deploy infrastructure'
 author: 'Pradipbabar'
 inputs:
+  tfvars:
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
-branding:
-  icon: 'cloud'
+  args: 
+    - -var-file=/workspace/${{ inputs.tfvars }}
