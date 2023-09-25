@@ -20,4 +20,4 @@ WORKDIR /workspace
 COPY . .
 # Entrypoint command to run Terraform apply
 
-CMD ["terraform", "apply", "-auto-approve", "-var-file=var.tfvar"]
+CMD ["terraform", "plan", "-var-file=var.tfvar"]
