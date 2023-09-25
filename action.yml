@@ -4,9 +4,9 @@ author: 'Pradipbabar'
 inputs:
   tfvars-file:
     description: 'Path to the .tfvars file'
-    required: true
+    required: false
 runs:
-  using: 'docker'
-  image: 'hashicorp/terraform:latest'
+  using: "docker"
+  image: "Dockerfile"
 branding:
   icon: 'cloud'
