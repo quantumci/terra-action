@@ -8,4 +8,6 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    - -var-file=${{ inputs.tfvars }}
+    - "terraform"
+    - "plan"
+    - "-var-file=${{ inputs.tfvars }}"
