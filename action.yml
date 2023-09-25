@@ -8,4 +8,4 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    - -var-file=/workspace/${{ inputs.tfvars }}
+    - -var-file=${{ inputs.tfvars }}
