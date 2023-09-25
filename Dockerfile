@@ -25,4 +25,4 @@ RUN pwd
 
 RUN terraform init
 
-CMD ["terraform", "plan", "-var-file=var.tfvar"]
+CMD ["terraform", "validate", "-var-file=var.tfvar"]

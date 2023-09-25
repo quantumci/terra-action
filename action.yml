@@ -9,5 +9,5 @@ runs:
   image: "Dockerfile"
   args: 
     - "terraform"
-    - "plan"
+    - "validate"
     - "-var-file=${{ inputs.tfvars }}"
