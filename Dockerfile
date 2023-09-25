@@ -14,12 +14,11 @@ unzip terraform.zip && \
 rm terraform.zip
 
 # Set the working directory
-WORKDIR /workspace
+
 
 # Copy your Terraform configuration files into the container
-COPY . /workspace
+COPY . .
 
-RUN cd workspace
 # Entrypoint command to run Terraform apply
 
 RUN pwd
