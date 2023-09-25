@@ -2,9 +2,6 @@ name: 'Terraform Action'
 description: 'Run Terraform to deploy infrastructure'
 author: 'Pradipbabar'
 inputs:
-  tfvars-file:
-    description: 'Path to the .tfvars file'
-    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
