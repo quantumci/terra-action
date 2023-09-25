@@ -20,6 +20,8 @@ WORKDIR /workspace
 COPY . .
 # Entrypoint command to run Terraform apply
 
+RUN pwd
+
 RUN terraform init
 
 CMD ["terraform", "plan", "-var-file=var.tfvar"]
