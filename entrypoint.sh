@@ -1,4 +1,4 @@
 #!/bin/sh
-aws-access-key-id= $2
-aws-secret-access-key= $3
-aws-default-region= $4
+aws-access-key-id= ${input.aws-access-key-id}
+aws-secret-access-key= ${input.aws-secret-access-key}
+aws-default-region= ${input.aws-default-region}
