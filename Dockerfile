@@ -27,4 +27,6 @@ RUN terraform init
 
 RUN terraform validate
 
+RUN terraform show
+
 CMD [ "terraform", "validate" ]

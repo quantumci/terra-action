@@ -9,7 +9,7 @@ runs:
   image: "Dockerfile"
   args: 
     - "terraform"
-    - "show"
+    - "init"
     # - "validate"
     # - "terraform"
     # - "validate"
