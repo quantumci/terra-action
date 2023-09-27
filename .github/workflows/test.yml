@@ -13,3 +13,6 @@ jobs:
         uses: ./
         with:
           tfvars: ./var.tfvars
+          aws-access-key-id: "xyzz"
+          aws-secret-access-key: "tst"
+          aws-default-region: "us-east-1"

@@ -5,7 +5,21 @@ FROM alpine:latest
 RUN apk add --update --no-cache \
     bash \
     curl \
-    unzip
+    unzip \
+    python3 \
+    py3-pip \
+    && pip3 install pip\
+    && pip3 install awscli
+
+# Accept AWS Ceds as build arg
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+ARG AWS_DEFAULT_REGION
+
+RUN aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID \
+    && aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY \
+    && aws configure set default.region $AWS_DEFAULT_REGION \
+    && aws configure set output json
 
 # Download and install Terraform
 RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
@@ -27,7 +41,6 @@ RUN terraform init
 
 RUN terraform validate
 
-RUN cat ${{ inputs.tfvars }}
 
 RUN terraform show
 
