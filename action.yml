@@ -10,7 +10,7 @@ runs:
   args: 
     - "terraform"
     - "init"
-    # - "&&"
+    - "validate"
     # - "terraform"
     # - "validate"
     # - "-var-file=${{ inputs.tfvars }}"
