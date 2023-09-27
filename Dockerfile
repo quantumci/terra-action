@@ -25,4 +25,4 @@ RUN pwd
 
 RUN terraform init
 
-RUN terraform plan
+RUN terraform validate
