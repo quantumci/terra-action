@@ -11,3 +11,5 @@ jobs:
       
       - name: run local actions/checkout
         uses: ./
+        with:
+          tfvars: ./var.tfvars
