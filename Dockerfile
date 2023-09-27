@@ -2,8 +2,6 @@
 FROM alpine:latest
 # Install required packages
 
-RUN ./entrypoint.sh
-
 RUN apk add --update --no-cache \
     bash \
     curl \
