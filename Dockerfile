@@ -25,4 +25,4 @@ RUN pwd
 
 RUN terraform init
 
-CMD ["terraform","validate"]
+RUN terraform plan
