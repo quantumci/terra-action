@@ -19,10 +19,11 @@ runs:
   args: 
     - "sh"
     - "-c"
-    - "terraform init -input=false\
-     -backend-config=\"access_key=${{inputs.aws-access-key-id}}\" \
-     -backend-config=\"secret_key=${{inputs.aws-secret-access-key}}\" \
-     -var-file=\"${{inputs.tfvars}}\""
+    # - "terraform init -input=false\
+    #  -backend-config=\"access_key=${{inputs.aws-access-key-id}}\" \
+    #  -backend-config=\"secret_key=${{inputs.aws-secret-access-key}}\" \
+    #  -var-file=\"${{inputs.tfvars}}\""
+    - "terraform init -input=false -backend-config='access_key=${{inputs.aws-access-key-id}}' -backend-config='secret_key={{inputs.aws-secret-access-key}}' -var-file=${{inputs.tfvars}}"
 
   #   - "terraform"
   #   - "init"
