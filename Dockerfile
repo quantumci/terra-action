@@ -27,7 +27,7 @@ RUN terraform init
 
 RUN terraform validate
 
-RUN terraform plan
+RUN cat ${{ inputs.tfvars }}
 
 RUN terraform show
 
