@@ -28,6 +28,6 @@ RUN pwd
 # RUN terraform validate
 
 
-RUN terraform show
+# RUN terraform show
 
 CMD [ "sh", "-c", "echo" ]
