@@ -26,3 +26,5 @@ RUN pwd
 RUN terraform init
 
 RUN terraform validate
+
+CMD [ "terraform", "init" ]
