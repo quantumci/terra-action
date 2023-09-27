@@ -8,9 +8,9 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    # - "terraforms
-    - "init"
-    - "validate"
+    - "terraform"
+    # - "init"
+    # - "validate"
     # - "terraform"
     # - "validate"
     # - "-var-file=${{ inputs.tfvars }}"
