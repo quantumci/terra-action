@@ -16,11 +16,14 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  # args: 
+  args: 
+    - "sh"
+    - "-c"
+    - "echo '${{inputs.aws-access-key-id}}'"
   #   - "terraform"
   #   - "init"
     # - "validate"
     # - "terraform"
     # - "validate"
     # - "-var-file=${{ inputs.tfvars }}"
-    
+
