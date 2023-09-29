@@ -19,6 +19,7 @@ runs:
   args: 
     - "sh"
     - "-c"
+    - "echo '$acess_key'"
     # - "terraform init -input=false\
     #  -backend-config=\"access_key=${{inputs.aws-access-key-id}}\" \
     #  -backend-config=\"secret_key=${{inputs.aws-secret-access-key}}\" \
