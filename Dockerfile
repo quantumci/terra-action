@@ -30,4 +30,4 @@ RUN pwd
 
 # RUN terraform show
 
-CMD [ "sh", "-c", "echo" ]
+CMD [ "sh", "-c", "echo "$acess_key"" ]
