@@ -5,7 +5,8 @@ FROM alpine:latest
 RUN apk add --update --no-cache \
     bash \
     curl \
-    unzip 
+    unzip \
+    jq
 
 
 # Download and install Terraform
