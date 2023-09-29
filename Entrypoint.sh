@@ -1,4 +1,4 @@
 #!/bin/bash
 
-acess_key=$(jq -r '.inputs.aws-access-key-id' action.yml)
+acess_key="$acess_key"
 echo "$acess_key"
