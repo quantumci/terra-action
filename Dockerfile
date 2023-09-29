@@ -29,6 +29,7 @@ RUN chmod +x Entrypoint.sh
 RUN  bash Entrypoint.sh
 # RUN terraform init
 
+RUN echo "$acess_key"
 # RUN terraform validate
 
 
