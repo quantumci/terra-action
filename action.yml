@@ -32,4 +32,6 @@ runs:
     # - "terraform"
     # - "validate"
     # - "-var-file=${{ inputs.tfvars }}"
+  env:
+    access_key : ${{inputs.aws-access-key-id}}
 
