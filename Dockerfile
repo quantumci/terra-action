@@ -7,7 +7,7 @@ RUN apk add --update --no-cache \
     curl \
     unzip 
 
-RUN bash Entrypoint.sh
+
 # Download and install Terraform
 RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
 unzip terraform.zip && \
@@ -24,6 +24,9 @@ COPY . .
 
 RUN pwd
 
+RUN chmod +x Entrypoint.sh
+
+RUN  bash Entrypoint.sh
 # RUN terraform init
 
 # RUN terraform validate
