@@ -4,21 +4,21 @@ author: 'Pradipbabar'
 inputs:
   tfvars:
     required: true
-  aws-access-key-id:
+  aws_access_key_id:
     description: 'AWS Access Key ID from GitHub Secrets'
     required: true
-  aws-secret-access-key:
+  aws_secret_access_key:
     description: 'AWS Secret Access Key from GitHub Secrets'
     required: true
-  aws-default-region:
+  aws_default_region:
     description: 'AWS Default Region from GitHub Secrets'
     required: true
 runs:
   using: "docker"
   image: "Dockerfile"
   # args: 
-    # - ${{ inputs.tfvars }}
-    # - ${{ inputs.aws-access-key-id }}
-    # - ${{ inputs.aws-secret-access-key }}
-    # - ${{ inputs.aws-default-region }}
+    #  _ ${{ inputs.tfvars }}
+    #  _ ${{ inputs.aws _access _key _id }}
+    #  _ ${{ inputs.aws _secret _access _key }}
+    #  _ ${{ inputs.aws _default _region }}
 
