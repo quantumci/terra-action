@@ -17,8 +17,8 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    - ${{ inputs.tfvars }}
-    - ${{ inputs.aws-access-key-id }}
-    - ${{ inputs.aws-secret-access-key }}
-    - ${{ inputs.aws-default-region }}
+    # - ${{ inputs.tfvars }}
+    # - ${{ inputs.aws-access-key-id }}
+    # - ${{ inputs.aws-secret-access-key }}
+    # - ${{ inputs.aws-default-region }}
 

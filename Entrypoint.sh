@@ -1,5 +1,5 @@
 #!/bin/sh -l
-cat $1
+cat $INPUT_TFVARS
 echo "$2" >> $GITHUB_OUTPUT
 echo "$3" >> $GITHUB_OUTPUT
 echo "$4" >> $GITHUB_OUTPUT
