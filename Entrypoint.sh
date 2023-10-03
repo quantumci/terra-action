@@ -6,3 +6,4 @@ echo "$INPUT_AWS_DEFAULT_REGION"
 time=$(date)
 echo "time=$time"
 terraform init
+terraform plan
