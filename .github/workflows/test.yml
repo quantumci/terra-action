@@ -16,3 +16,6 @@ jobs:
           aws-access-key-id: cdde
           aws-secret-access-key: xxy
           aws-default-region: us-east-1
+
+      - name: get the Outputs
+        run:  echo "The time was ${{ steps.hello.outputs.time }}"  

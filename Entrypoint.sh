@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/bin/sh -l
 
-acess_key="$acess_key"
-echo "$acess_key"
+cat $1
+echo "$2" >> $GITHUB_OUTPUT
+echo "$3" >> $GITHUB_OUTPUT
+echo "$4" >> $GITHUB_OUTPUT
+time=$(date)
+echo "time=$time" >> $GITHUB_OUTPUT
+

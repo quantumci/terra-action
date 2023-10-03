@@ -17,21 +17,8 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args: 
-    - "sh"
-    - "-c"
-    - "echo '$acess_key'"
-    # - "terraform init -input=false\
-    #  -backend-config=\"access_key=${{inputs.aws-access-key-id}}\" \
-    #  -backend-config=\"secret_key=${{inputs.aws-secret-access-key}}\" \
-    #  -var-file=\"${{inputs.tfvars}}\""
-    # - "terraform init -input=false -backend-config='access_key=${{inputs.aws-access-key-id}}' -backend-config='secret_key={{inputs.aws-secret-access-key}}' -var-file=${{inputs.tfvars}}"
-
-  #   - "terraform"
-  #   - "init"
-    # - "validate"
-    # - "terraform"
-    # - "validate"
-    # - "-var-file=${{ inputs.tfvars }}"
-  env:
-    access_key : ${{inputs.aws-access-key-id}}
+    - ${{ inputs.tfvars }}
+    - ${{ inputs.aws-access-key-id }}
+    - ${{ inputs.aws-secret-access-key }}
+    - ${{ inputs.aws-default-region }}
 

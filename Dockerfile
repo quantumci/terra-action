@@ -26,13 +26,4 @@ RUN pwd
 
 RUN chmod +x Entrypoint.sh
 
-RUN  bash Entrypoint.sh
-# RUN terraform init
-
-RUN echo "$acess_key"
-# RUN terraform validate
-
-
-# RUN terraform show
-
-CMD [ "sh", "-c", "echo "$acess_key"" ]
+CMD ["/Entrypoint.sh"]
