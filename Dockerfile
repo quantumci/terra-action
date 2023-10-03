@@ -31,4 +31,4 @@ RUN ls
 
 RUN chmod +x Entrypoint.sh
 
-CMD ["/Entrypoint.sh"]
+CMD ["Entrypoint.sh"]

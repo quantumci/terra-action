@@ -20,3 +20,5 @@ Dockerfile
 .dockerignore
 action.yml
 .terraform**
+LICENSE
+README.md
