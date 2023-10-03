@@ -27,6 +27,8 @@ COPY . /workspace
 
 RUN pwd
 
+RUN ls
+
 RUN chmod +x Entrypoint.sh
 
 CMD ["/Entrypoint.sh"]
