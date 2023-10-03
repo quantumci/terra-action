@@ -22,6 +22,8 @@ COPY . .
 
 # Entrypoint command to run Terraform apply
 
+RUN chmod +x $1
+
 RUN pwd
 
 RUN chmod +x Entrypoint.sh
