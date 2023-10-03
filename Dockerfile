@@ -10,10 +10,11 @@ RUN apk add --update --no-cache \
 
 
 # Download and install Terraform
-RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
-unzip terraform.zip && \
-    mv terraform /usr/local/bin/terraform && \
-rm terraform.zip
+
+# RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
+# unzip terraform.zip && \
+#     mv terraform /usr/local/bin/terraform && \
+# rm terraform.zip
 
 # Set the working directory
 
