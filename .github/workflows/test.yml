@@ -8,10 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      - name: run local actions/checkout
-        uses: ./
+
+      - name: make tfvar file executable
         run: chmod +x ./var.tfvars
+      
+      - name: run local actions
+        uses: ./
         with:
           tfvars: ./var.tfvars
           aws-access-key-id: cdde
