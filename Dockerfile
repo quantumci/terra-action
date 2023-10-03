@@ -27,4 +27,4 @@ RUN pwd
 
 RUN chmod +x Entrypoint.sh
 
-CMD ["sudo","/Entrypoint.sh"]
+CMD ["Entrypoint.sh"]

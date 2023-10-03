@@ -12,7 +12,7 @@ jobs:
       - name: run local actions/checkout
         uses: ./
         with:
-          tfvars: ./var.tfvars
+          tfvars: abc
           aws-access-key-id: cdde
           aws-secret-access-key: xxy
           aws-default-region: us-east-1
