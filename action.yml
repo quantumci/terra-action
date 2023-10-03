@@ -16,7 +16,7 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args: 
+  # args: 
     # - ${{ inputs.tfvars }}
     # - ${{ inputs.aws-access-key-id }}
     # - ${{ inputs.aws-secret-access-key }}
