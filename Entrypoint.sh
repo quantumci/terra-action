@@ -7,3 +7,6 @@ time=$(date)
 echo "time=$time"
 # terraform init
 
+localstack start
+terraform init
+terraform plan
