@@ -11,7 +11,6 @@ RUN apk update &&\
 
 LABEL maintainer="mail@gmal.com"
 
-RUN pip install localstack
 # Download and install Terraform
 
 RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
