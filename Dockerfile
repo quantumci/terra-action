@@ -7,8 +7,7 @@ RUN apk update &&\
     bash \
     curl \
     unzip \
-    python3\
-    python3-pip
+    python3
 
 LABEL maintainer="mail@gmal.com"
 
