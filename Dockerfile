@@ -5,20 +5,16 @@ FROM alpine:latest
 RUN apk add --update --no-cache \
     bash \
     curl \
-    unzip \
-    python3\
-    python3-pip\
-    python3-venv
+    unzip 
 
-LABEL maintainer="mail@gmal.com"
 
-RUN pip install localstack
+
 # Download and install Terraform
 
-RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
-unzip terraform.zip && \
-    mv terraform /usr/local/bin/terraform && \
-rm terraform.zip
+# RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
+# unzip terraform.zip && \
+#     mv terraform /usr/local/bin/terraform && \
+# rm terraform.zip
 
 # Set the working directory
 
@@ -35,7 +31,5 @@ RUN pwd
 RUN ls
 
 RUN chmod +x Entrypoint.sh
-
-EXPOSE 4566-4599
 
 CMD ["/workspace/Entrypoint.sh"]
