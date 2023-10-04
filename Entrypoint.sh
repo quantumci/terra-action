@@ -8,6 +8,7 @@ echo "time=$time"
 # terraform init
 curl -L "https://github.com/localstack/localstack/blob/master/docker-compose.yml" -o docker-compose.yml
 docker-compose up -d 
+docker ps
 cd /workspace 
 terraform init
 terraform plan
