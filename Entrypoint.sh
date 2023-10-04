@@ -6,12 +6,8 @@ echo "$INPUT_AWS_DEFAULT_REGION"
 time=$(date)
 echo "time=$time"
 # terraform init
-python3 -m pip install --upgrade venv
-python3 -m venv .venv      # <- create a new isolated environment
-source .venv/bin/activate # <- activate it
-python3 -m pip install --upgrade localstack    # <- install localstack in that environment
-localstack                # <- run localstack
-
+curl -L "https://github.com/localstack/localstack/blob/master/docker-compose.yml" -o docker-compose.yml
+docker-compose up -d 
 cd /workspace 
 terraform init
 terraform plan
