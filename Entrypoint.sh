@@ -6,7 +6,11 @@ echo "$INPUT_AWS_DEFAULT_REGION"
 time=$(date)
 echo "time=$time"
 # terraform init
+python3 -m venv .venv      # <- create a new isolated environment
+source .venv/bin/activate # <- activate it
+pip3 install localstack    # <- install localstack in that environment
+localstack                # <- run localstack
 
-localstack start
+cd /workspace 
 terraform init
 terraform plan
